@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Smiles Verify Email View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="SmilesVerifyEmailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="SmilesVerifyEmailViewController" customModule="SmilesEmailVerification" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kVW-AV-Uhc">
+                                <rect key="frame" x="0.0" y="340.66666666666674" width="393" height="511.33333333333326"/>
+                                <subviews>
+                                    <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rdl-q3-dYJ">
+                                        <rect key="frame" x="174" y="8" width="45" height="5"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="5" id="3W3-UW-hJN"/>
+                                            <constraint firstAttribute="width" constant="45" id="KnI-q7-aff"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlC-uD-oMm">
+                                        <rect key="frame" x="343" y="19" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="QnS-x5-Nto"/>
+                                            <constraint firstAttribute="height" constant="30" id="gDA-Ep-LMO"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" backgroundImage="close_icon"/>
+                                        <connections>
+                                            <action selector="closeButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="cX0-RE-r3c"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2qO-wo-nc2">
+                                        <rect key="frame" x="97.666666666666686" y="64" width="198" height="154"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="verify-email-icon" translatesAutoresizingMaskIntoConstraints="NO" id="O3q-bv-yjK">
+                                                <rect key="frame" x="0.0" y="0.0" width="198" height="154"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="O3q-bv-yjK" firstAttribute="leading" secondItem="2qO-wo-nc2" secondAttribute="leading" id="0kp-KH-zgc"/>
+                                            <constraint firstAttribute="bottom" secondItem="O3q-bv-yjK" secondAttribute="bottom" id="CCi-fs-b7Z"/>
+                                            <constraint firstAttribute="trailing" secondItem="O3q-bv-yjK" secondAttribute="trailing" id="RSS-Dt-ted"/>
+                                            <constraint firstAttribute="height" constant="154" id="Rkm-r3-dpX"/>
+                                            <constraint firstItem="O3q-bv-yjK" firstAttribute="top" secondItem="2qO-wo-nc2" secondAttribute="top" id="hYx-Ld-1ER"/>
+                                            <constraint firstAttribute="width" constant="198" id="o4u-gs-Vj4"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Czv-yj-DQf">
+                                        <rect key="frame" x="16" y="238.99999999999997" width="361" height="85.333333333333343"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email verification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQF-mW-cer">
+                                                <rect key="frame" x="0.0" y="0.0" width="361" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sae-aP-s77">
+                                                <rect key="frame" x="0.0" y="24.333333333333371" width="361" height="61"/>
+                                                <string key="text">Let’s get started by verifying your email.
+A verification link has been sent to your below registered email address</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Uq-1h-sOU">
+                                        <rect key="frame" x="16" y="340.33333333333331" width="48" height="48"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mail_icon" translatesAutoresizingMaskIntoConstraints="NO" id="cFB-nV-a5M">
+                                                <rect key="frame" x="12" y="12" width="24" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="kk2-dJ-s4j"/>
+                                                    <constraint firstAttribute="width" constant="24" id="wk3-DA-es3"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="cFB-nV-a5M" firstAttribute="centerY" secondItem="8Uq-1h-sOU" secondAttribute="centerY" id="CKf-HS-GZX"/>
+                                            <constraint firstItem="cFB-nV-a5M" firstAttribute="centerX" secondItem="8Uq-1h-sOU" secondAttribute="centerX" id="NWM-dd-jf2"/>
+                                            <constraint firstAttribute="height" constant="48" id="UYd-4Z-6L4"/>
+                                            <constraint firstAttribute="width" constant="48" id="j06-t3-vEs"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="bZM-OA-61q">
+                                        <rect key="frame" x="80" y="340.33333333333331" width="297" height="44.666666666666686"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="john.doe@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1R-8G-PCq">
+                                                <rect key="frame" x="0.0" y="0.0" width="297" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Link will be valid only for 24 hrs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oaC-cu-asT">
+                                                <rect key="frame" x="0.0" y="24.333333333333371" width="297" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="hiY-Kq-uNe">
+                                        <rect key="frame" x="16" y="413.33333333333331" width="361" height="48"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E8y-li-vGz">
+                                                <rect key="frame" x="0.0" y="0.0" width="172.66666666666666" height="48"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Send link"/>
+                                                <connections>
+                                                    <action selector="primaryButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Qen-WL-bWT"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NPt-PE-VhZ">
+                                                <rect key="frame" x="188.66666666666663" y="0.0" width="172.33333333333337" height="48"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Later"/>
+                                                <connections>
+                                                    <action selector="secondaryButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="qqF-sr-dwa"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="xob-Jm-0DN"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="rdl-q3-dYJ" firstAttribute="centerX" secondItem="kVW-AV-Uhc" secondAttribute="centerX" id="2vZ-Zm-bYt"/>
+                                    <constraint firstItem="hiY-Kq-uNe" firstAttribute="leading" secondItem="kVW-AV-Uhc" secondAttribute="leading" constant="16" id="B05-ax-73E"/>
+                                    <constraint firstItem="8Uq-1h-sOU" firstAttribute="leading" secondItem="kVW-AV-Uhc" secondAttribute="leading" constant="16" id="Bnj-6e-DcC"/>
+                                    <constraint firstItem="8Uq-1h-sOU" firstAttribute="top" secondItem="Czv-yj-DQf" secondAttribute="bottom" constant="16" id="CRv-rS-wYb"/>
+                                    <constraint firstAttribute="trailing" secondItem="bZM-OA-61q" secondAttribute="trailing" constant="16" id="I63-mM-oEk"/>
+                                    <constraint firstItem="rdl-q3-dYJ" firstAttribute="top" secondItem="kVW-AV-Uhc" secondAttribute="top" constant="8" id="OAc-4f-oSr"/>
+                                    <constraint firstItem="Czv-yj-DQf" firstAttribute="leading" secondItem="kVW-AV-Uhc" secondAttribute="leading" constant="16" id="TML-05-bRh"/>
+                                    <constraint firstItem="2qO-wo-nc2" firstAttribute="centerX" secondItem="kVW-AV-Uhc" secondAttribute="centerX" id="UUR-ye-QMh"/>
+                                    <constraint firstAttribute="trailing" secondItem="hiY-Kq-uNe" secondAttribute="trailing" constant="16" id="Vid-D4-9qe"/>
+                                    <constraint firstItem="bZM-OA-61q" firstAttribute="top" secondItem="8Uq-1h-sOU" secondAttribute="top" id="e63-QZ-FVi"/>
+                                    <constraint firstAttribute="bottom" secondItem="hiY-Kq-uNe" secondAttribute="bottom" constant="50" id="hix-QF-kcR"/>
+                                    <constraint firstItem="Czv-yj-DQf" firstAttribute="top" secondItem="2qO-wo-nc2" secondAttribute="bottom" constant="21" id="la0-H9-iLD"/>
+                                    <constraint firstItem="mlC-uD-oMm" firstAttribute="top" secondItem="rdl-q3-dYJ" secondAttribute="bottom" constant="6" id="pxL-Hv-3wY"/>
+                                    <constraint firstItem="bZM-OA-61q" firstAttribute="leading" secondItem="8Uq-1h-sOU" secondAttribute="trailing" constant="16" id="qts-2l-6Qp"/>
+                                    <constraint firstAttribute="trailing" secondItem="Czv-yj-DQf" secondAttribute="trailing" constant="16" id="shm-Nj-R7J"/>
+                                    <constraint firstAttribute="trailing" secondItem="mlC-uD-oMm" secondAttribute="trailing" constant="20" id="v1c-Q0-tzA"/>
+                                    <constraint firstItem="2qO-wo-nc2" firstAttribute="top" secondItem="mlC-uD-oMm" secondAttribute="bottom" constant="15" id="xQZ-mk-sSo"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kVW-AV-Uhc" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="BEb-uX-zaV"/>
+                            <constraint firstAttribute="bottom" secondItem="kVW-AV-Uhc" secondAttribute="bottom" id="EoX-jn-dSu"/>
+                            <constraint firstItem="kVW-AV-Uhc" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="UxR-a8-uJP"/>
+                            <constraint firstItem="kVW-AV-Uhc" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.6" id="nXE-7K-Fia"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bottomContainerView" destination="kVW-AV-Uhc" id="Q2I-O7-qMy"/>
+                        <outlet property="descriptionLabel" destination="sae-aP-s77" id="Uu8-KV-lgr"/>
+                        <outlet property="emailLabel" destination="B1R-8G-PCq" id="cYB-I2-fub"/>
+                        <outlet property="handleView" destination="rdl-q3-dYJ" id="A0U-Jd-Dto"/>
+                        <outlet property="iconImageView" destination="cFB-nV-a5M" id="lsp-Uq-n07"/>
+                        <outlet property="linkValidityLabel" destination="oaC-cu-asT" id="1cz-FM-JbE"/>
+                        <outlet property="primaryButton" destination="E8y-li-vGz" id="FMb-gV-JEm"/>
+                        <outlet property="roundIconView" destination="8Uq-1h-sOU" id="awC-sO-ba4"/>
+                        <outlet property="secondaryButton" destination="NPt-PE-VhZ" id="9up-w0-NJI"/>
+                        <outlet property="titleLabel" destination="YQF-mW-cer" id="386-2A-cUn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="93.89312977099236" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="close_icon" width="24" height="24.333333969116211"/>
+        <image name="mail_icon" width="24" height="24"/>
+        <image name="verify-email-icon" width="198" height="158"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
