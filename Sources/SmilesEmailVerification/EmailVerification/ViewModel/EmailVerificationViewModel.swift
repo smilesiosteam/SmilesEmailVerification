@@ -32,7 +32,6 @@ extension EmailVerificationViewModel {
         input.sink { [weak self] event in
             switch event {
             case .sendEmailVerificationLink(let baseUrl):
-                print("sendEmailVerificationLink")
                 self?.sendEmailVerificationLink(baseUrl: baseUrl)
             }
         }.store(in: &cancellables)
@@ -53,14 +52,11 @@ extension EmailVerificationViewModel {
                 debugPrint(completion)
                 switch completion {
                 case .failure(let error):
-                    print("Error")
                     self?.output.send(.sendEmailVerificationLinkDidFail(error: error))
                 case .finished:
-                    print("Finished")
                     debugPrint("nothing much to do here")
                 }
             } receiveValue: { [weak self] response in
-                print("Receive Value")
                 self?.output.send(.sendEmailVerificationLinkDidSucceed(response: response))
             }
         .store(in: &cancellables)
