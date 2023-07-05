@@ -23,7 +23,8 @@ let package = Package(
         .package(url: "https://github.com/smilesiosteam/SmilesBaseMainRequest.git", .upToNextMinor(from: "1.0.0")),
         .package(url: "https://github.com/Juanpe/SkeletonView.git", from: "1.7.0"),
         .package(url: "https://github.com/SDWebImage/SDWebImage.git", from: "5.1.0"),
-        .package(url: "https://github.com/smilesiosteam/SmilesFontsManager.git", .upToNextMajor(from: "1.0.0"))
+        .package(url: "https://github.com/smilesiosteam/SmilesFontsManager.git", .upToNextMajor(from: "1.0.0")),
+        .package(url: "https://github.com/smilesiosteam/NetworkingLayer.git", branch: "main")
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -37,7 +38,8 @@ let package = Package(
                 .product(name: "SmilesBaseMainRequestManager", package: "SmilesBaseMainRequest"),
                 .product(name: "SkeletonView", package: "SkeletonView"),
                 .product(name: "SDWebImage", package: "SDWebImage"),
-                .product(name: "SmilesFontsManager", package: "SmilesFontsManager")
+                .product(name: "SmilesFontsManager", package: "SmilesFontsManager"),
+                .product(name: "NetworkingLayer", package: "NetworkingLayer")
             ]),
         .testTarget(
             name: "SmilesEmailVerificationTests",
