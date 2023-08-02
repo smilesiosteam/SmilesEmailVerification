@@ -8,12 +8,13 @@
 import Foundation
 import Combine
 import NetworkingLayer
+import SmilesUtilities
 
 class EmailVerificationViewModel {
     
     // MARK: - INPUT. View event methods
     enum Input {
-        case sendEmailVerificationLink(baseUrl: String)
+        case sendEmailVerificationLink
     }
     
     enum Output {
@@ -31,19 +32,19 @@ extension EmailVerificationViewModel {
         output = PassthroughSubject<Output, Never>()
         input.sink { [weak self] event in
             switch event {
-            case .sendEmailVerificationLink(let baseUrl):
-                self?.sendEmailVerificationLink(baseUrl: baseUrl)
+            case .sendEmailVerificationLink:
+                self?.sendEmailVerificationLink()
             }
         }.store(in: &cancellables)
         return output.eraseToAnyPublisher()
     }
     
-    func sendEmailVerificationLink(baseUrl: String) {
+    func sendEmailVerificationLink() {
         let sendEmailVerificationLinkRequest = SmilesEmailVerificationRequestModel()
         
         let service = GetEmailVerificationRepository(
             networkRequest: NetworkingLayerRequestable(requestTimeOut: 60),
-            baseUrl: baseUrl,
+            baseUrl: AppCommonMethods.serviceBaseUrl,
             endPoint: .sendVerifyEmailLink
         )
         

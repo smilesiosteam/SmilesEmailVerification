@@ -9,6 +9,7 @@ import UIKit
 import SmilesUtilities
 import SmilesFontsManager
 import Combine
+import SmilesLanguageManager
 
 public class SmilesVerifyEmailViewController: UIViewController {
     
@@ -30,7 +31,7 @@ public class SmilesVerifyEmailViewController: UIViewController {
     private let viewModel = EmailVerificationViewModel()
     private var cancellables = Set<AnyCancellable>()
     
-    public var baseUrl: String?
+    public var userEmail: String?
     public var didVerifyEmail: ((SmilesEmailVerificationResponseModel) -> Void)?
     
     public override func viewDidLoad() {
@@ -39,12 +40,28 @@ public class SmilesVerifyEmailViewController: UIViewController {
         setupViewUI()
     }
     
+    public override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        initialSetup()
+    }
+    
+    private func initialSetup() {
+        emailLabel.text = userEmail ?? ""
+        emailLabel.textAlignment = AppCommonMethods.languageIsArabic() ? .right : .left
+        
+        titleLabel.text = SmilesLanguageManager.shared.getLocalizedString(for: "EmailVerification")
+        descriptionLabel.text = SmilesLanguageManager.shared.getLocalizedString(for: "EmailVerificationDescription")
+        linkValidityLabel.text = SmilesLanguageManager.shared.getLocalizedString(for: "EmailLinkDuration")
+        primaryButton.setTitle(SmilesLanguageManager.shared.getLocalizedString(for: "EmailVerificationSendLink"), for: .normal)
+        secondaryButton.setTitle(SmilesLanguageManager.shared.getLocalizedString(for: "EmailVerificationLater"), for: .normal)
+    }
+    
     private func setupViewUI() {
         view.backgroundColor = .appRevampFilterTextColor.withAlphaComponent(0.6)
         
-        titleLabel.font = SmilesFonts.circular.getFont(style: .medium, size: 20)
+        titleLabel.fontTextStyle = .smilesHeadline2
         titleLabel.textColor = .appRevampLocationTextColor
-        descriptionLabel.font = SmilesFonts.circular.getFont(style: .book, size: 14)
+        descriptionLabel.fontTextStyle = .smilesBody3
         descriptionLabel.textColor = UIColor(red: 109.0 / 255.0, green: 102.0 / 255.0, blue: 112.0 / 255.0, alpha: 1.0) // Add color in UIColor extension in Smiles Utilities
         
         bottomContainerView.addMaskedCorner(withMaskedCorner: [.layerMinXMinYCorner, .layerMaxXMinYCorner], cornerRadius: 16)
@@ -53,22 +70,22 @@ public class SmilesVerifyEmailViewController: UIViewController {
         roundIconView.addMaskedCorner(withMaskedCorner: [.layerMinXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMaxYCorner, .layerMaxXMinYCorner], cornerRadius: roundIconView.bounds.height / 2)
         roundIconView.backgroundColor = .appRevampEnableStateColor
         
-        emailLabel.font = SmilesFonts.circular.getFont(style: .medium, size: 16)
+        emailLabel.fontTextStyle = .smilesHeadline4
         emailLabel.textColor = .appRevampClosingTextGrayColor
         
-        linkValidityLabel.font = SmilesFonts.circular.getFont(style: .book, size: 14)
+        linkValidityLabel.fontTextStyle = .smilesBody3
         linkValidityLabel.textColor = .appRevampHomeSearchColor
         
         secondaryButton.addMaskedCorner(withMaskedCorner: [.layerMinXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMaxYCorner, .layerMaxXMinYCorner], cornerRadius: primaryButton.bounds.height / 2)
         secondaryButton.setBackgroundColor(.appRevampPurpleMainColor, for: .normal)
         secondaryButton.setTitleColor(.white, for: .normal)
-        secondaryButton.titleLabel?.font = SmilesFonts.circular.getFont(style: .medium, size: 16)
+        secondaryButton.titleLabel?.fontTextStyle = .smilesTitle1
         
         primaryButton.addMaskedCorner(withMaskedCorner: [.layerMinXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMaxYCorner, .layerMaxXMinYCorner], cornerRadius: secondaryButton.bounds.height / 2)
         let primaryButtonColor = UIColor(red: 110.0 / 255.0, green: 60.0 / 255.0, blue: 130.0 / 255.0, alpha: 1.0) // Add color in UIColor extension in Smiles Utilities
         primaryButton.setTitleColor(primaryButtonColor, for: .normal)
         primaryButton.addBorder(withBorderWidth: 2, borderColor: primaryButtonColor)
-        primaryButton.titleLabel?.font = SmilesFonts.circular.getFont(style: .medium, size: 16)
+        primaryButton.titleLabel?.fontTextStyle = .smilesTitle1
     }
     
     // MARK: -- Binding
@@ -102,9 +119,7 @@ extension SmilesVerifyEmailViewController {
     }
     
     @IBAction func primaryButtonTapped(_ sender: UIButton) {
-        if let baseUrl {
-            self.input.send(.sendEmailVerificationLink(baseUrl: baseUrl))
-        }
+        self.input.send(.sendEmailVerificationLink)
     }
     
     @IBAction func secondaryButtonTapped(_ sender: UIButton) {
