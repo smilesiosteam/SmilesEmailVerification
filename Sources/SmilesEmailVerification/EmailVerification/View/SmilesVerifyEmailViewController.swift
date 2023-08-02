@@ -65,7 +65,7 @@ public class SmilesVerifyEmailViewController: UIViewController {
         descriptionLabel.textColor = UIColor(red: 109.0 / 255.0, green: 102.0 / 255.0, blue: 112.0 / 255.0, alpha: 1.0) // Add color in UIColor extension in Smiles Utilities
         
         bottomContainerView.addMaskedCorner(withMaskedCorner: [.layerMinXMinYCorner, .layerMaxXMinYCorner], cornerRadius: 16)
-        handleView.addMaskedCorner(withMaskedCorner: [.layerMinXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMaxYCorner, .layerMaxXMinYCorner], cornerRadius: 5)
+        handleView.addMaskedCorner(withMaskedCorner: [.layerMinXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMaxYCorner, .layerMaxXMinYCorner], cornerRadius: handleView.bounds.height / 2)
         
         roundIconView.addMaskedCorner(withMaskedCorner: [.layerMinXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMaxYCorner, .layerMaxXMinYCorner], cornerRadius: roundIconView.bounds.height / 2)
         roundIconView.backgroundColor = .appRevampEnableStateColor

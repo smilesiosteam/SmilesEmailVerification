@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -14,14 +14,14 @@
             <objects>
                 <viewController storyboardIdentifier="SmilesVerifyEmailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="SmilesVerifyEmailViewController" customModule="SmilesEmailVerification" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kVW-AV-Uhc">
-                                <rect key="frame" x="0.0" y="340.66666666666674" width="393" height="511.33333333333326"/>
+                                <rect key="frame" x="0.0" y="389" width="414" height="507"/>
                                 <subviews>
                                     <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rdl-q3-dYJ">
-                                        <rect key="frame" x="174" y="8" width="45" height="5"/>
+                                        <rect key="frame" x="184.5" y="8" width="45" height="5"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="5" id="3W3-UW-hJN"/>
@@ -29,7 +29,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlC-uD-oMm">
-                                        <rect key="frame" x="343" y="19" width="30" height="30"/>
+                                        <rect key="frame" x="364" y="19" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="QnS-x5-Nto"/>
                                             <constraint firstAttribute="height" constant="30" id="gDA-Ep-LMO"/>
@@ -41,7 +41,7 @@
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2qO-wo-nc2">
-                                        <rect key="frame" x="97.666666666666686" y="64" width="198" height="154"/>
+                                        <rect key="frame" x="108" y="64" width="198" height="154"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="verify-email-icon" translatesAutoresizingMaskIntoConstraints="NO" id="O3q-bv-yjK">
                                                 <rect key="frame" x="0.0" y="0.0" width="198" height="154"/>
@@ -58,16 +58,16 @@
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Czv-yj-DQf">
-                                        <rect key="frame" x="16" y="238.99999999999997" width="361" height="85.333333333333343"/>
+                                        <rect key="frame" x="16" y="239" width="382" height="85.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email verification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQF-mW-cer">
-                                                <rect key="frame" x="0.0" y="0.0" width="361" height="20.333333333333332"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sae-aP-s77">
-                                                <rect key="frame" x="0.0" y="24.333333333333371" width="361" height="61"/>
+                                                <rect key="frame" x="0.0" y="24.5" width="382" height="61"/>
                                                 <string key="text">Let’s get started by verifying your email.
 A verification link has been sent to your below registered email address</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -77,7 +77,7 @@ A verification link has been sent to your below registered email address</string
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Uq-1h-sOU">
-                                        <rect key="frame" x="16" y="340.33333333333331" width="48" height="48"/>
+                                        <rect key="frame" x="16" y="340.5" width="48" height="48"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mail_icon" translatesAutoresizingMaskIntoConstraints="NO" id="cFB-nV-a5M">
                                                 <rect key="frame" x="12" y="12" width="24" height="24"/>
@@ -96,16 +96,16 @@ A verification link has been sent to your below registered email address</string
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="bZM-OA-61q">
-                                        <rect key="frame" x="80" y="340.33333333333331" width="297" height="44.666666666666686"/>
+                                        <rect key="frame" x="80" y="340.5" width="318" height="45"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="john.doe@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1R-8G-PCq">
-                                                <rect key="frame" x="0.0" y="0.0" width="297" height="20.333333333333332"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="318" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Link will be valid only for 24 hrs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oaC-cu-asT">
-                                                <rect key="frame" x="0.0" y="24.333333333333371" width="297" height="20.333333333333329"/>
+                                                <rect key="frame" x="0.0" y="24.5" width="318" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -113,10 +113,10 @@ A verification link has been sent to your below registered email address</string
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="hiY-Kq-uNe">
-                                        <rect key="frame" x="16" y="413.33333333333331" width="361" height="48"/>
+                                        <rect key="frame" x="16" y="409" width="382" height="48"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E8y-li-vGz">
-                                                <rect key="frame" x="0.0" y="0.0" width="172.66666666666666" height="48"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="183" height="48"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Send link"/>
                                                 <connections>
@@ -124,7 +124,7 @@ A verification link has been sent to your below registered email address</string
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NPt-PE-VhZ">
-                                                <rect key="frame" x="188.66666666666663" y="0.0" width="172.33333333333337" height="48"/>
+                                                <rect key="frame" x="199" y="0.0" width="183" height="48"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Later"/>
                                                 <connections>
@@ -142,6 +142,7 @@ A verification link has been sent to your below registered email address</string
                                     <constraint firstItem="rdl-q3-dYJ" firstAttribute="centerX" secondItem="kVW-AV-Uhc" secondAttribute="centerX" id="2vZ-Zm-bYt"/>
                                     <constraint firstItem="hiY-Kq-uNe" firstAttribute="leading" secondItem="kVW-AV-Uhc" secondAttribute="leading" constant="16" id="B05-ax-73E"/>
                                     <constraint firstItem="8Uq-1h-sOU" firstAttribute="leading" secondItem="kVW-AV-Uhc" secondAttribute="leading" constant="16" id="Bnj-6e-DcC"/>
+                                    <constraint firstAttribute="height" constant="507" id="C3w-0j-3hu"/>
                                     <constraint firstItem="8Uq-1h-sOU" firstAttribute="top" secondItem="Czv-yj-DQf" secondAttribute="bottom" constant="16" id="CRv-rS-wYb"/>
                                     <constraint firstAttribute="trailing" secondItem="bZM-OA-61q" secondAttribute="trailing" constant="16" id="I63-mM-oEk"/>
                                     <constraint firstItem="rdl-q3-dYJ" firstAttribute="top" secondItem="kVW-AV-Uhc" secondAttribute="top" constant="8" id="OAc-4f-oSr"/>
@@ -165,7 +166,6 @@ A verification link has been sent to your below registered email address</string
                             <constraint firstItem="kVW-AV-Uhc" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="BEb-uX-zaV"/>
                             <constraint firstAttribute="bottom" secondItem="kVW-AV-Uhc" secondAttribute="bottom" id="EoX-jn-dSu"/>
                             <constraint firstItem="kVW-AV-Uhc" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="UxR-a8-uJP"/>
-                            <constraint firstItem="kVW-AV-Uhc" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.6" id="nXE-7K-Fia"/>
                         </constraints>
                     </view>
                     <connections>
@@ -187,7 +187,7 @@ A verification link has been sent to your below registered email address</string
         </scene>
     </scenes>
     <resources>
-        <image name="close_icon" width="24" height="24.333333969116211"/>
+        <image name="close_icon" width="24" height="24.5"/>
         <image name="mail_icon" width="24" height="24"/>
         <image name="verify-email-icon" width="198" height="158"/>
         <systemColor name="systemBackgroundColor">
